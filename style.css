@@ -1,0 +1,42 @@
+html, body  
+{
+    background-color: darkslategray;
+    color: #fff;
+    height: 100%;
+    width:  100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Content
+{
+    border: 3px solid #fff;
+    padding: 40px;
+
+}
+.form-button
+{
+    display: grid;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 576px) 
+{
+    .groess.row>* {
+        width: auto;
+    }
+    .plz {
+        margin-bottom: 1rem;
+    }
+}
