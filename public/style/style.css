@@ -1,6 +1,6 @@
 html, body  
 {
-    background-color: darkred;
+    background-color: lightgray;
     color: #6c757d;
     height: 100%;
     width:  100%;
@@ -29,6 +29,13 @@ select#Größe {
 .invalid-tooltip {
     top:auto;
 }
+.footer {
+    background: darkblue;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
