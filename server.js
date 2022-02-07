@@ -1,31 +1,21 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const app = express();
-const cors = require('cors')
+const path = require('path')
+const dirPath = path.join(__dirname, '/public');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-const corsOpts = {
-    origin: '*',
+app.get('/', (req, res) =>{ res.sendFile('index.html', { root: dirPath });;
+})
 
-    methods: [
-        'GET',
-        'POST',
-    ],
-
-    allowedHeaders: [
-        'Content-Type',
-    ],
-};
-  
-app.use(cors(corsOpts));
-
-app.post('/neuBestellung', urlencodedParser,  (req, res) => {
+app.post('/api/neuBestellung',  (req, res) => {
     try {
         add(req);
-        res.end('{"success"}');
+        res.json({msg:'success'});
       } catch (error) {
-        res.end(error);
+        res.json({msg:'error'});
       }
 })
 
@@ -50,6 +40,8 @@ async function add(req) {
         new Error("Error");
     }
 }
+
+app.use('/files', express.static(__dirname + '/public'))
 
 // server for Rest api with port 3030 and app.listen for star the server
 var port = 3030;

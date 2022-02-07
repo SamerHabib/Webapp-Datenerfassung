@@ -1,24 +1,34 @@
 html, body  
 {
-    background-color: darkslategray;
-    color: #fff;
+    background-color: darkred;
+    color: #6c757d;
     height: 100%;
     width:  100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.Content
+.Header
 {
-    border: 3px solid #fff;
+    background: url(https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80) center center/cover no-repeat;
+    background-position: right 0px bottom -200px;
+    padding-top: 100px;
+}
+.MyForm
+{
     padding: 40px;
-
+    background: white;
 }
 .form-button
 {
     display: grid;
 }
-
+select#Größe {
+    color: #6c757d;
+}
+.invalid-tooltip {
+    top:auto;
+}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -33,9 +43,6 @@ input[type=number] {
 
 @media (max-width: 576px) 
 {
-    .groess.row>* {
-        width: auto;
-    }
     .plz {
         margin-bottom: 1rem;
     }
